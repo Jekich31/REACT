@@ -46,9 +46,10 @@ export default function App() {
 
   return (
     <div className="app-container">
-      <h1>Модуль 5. Функціональні компоненти та Props (TypeScript)</h1>
-
+      <h1>Homework03.11</h1>
+      <br></br>
       <nav className="tabs">
+        
         <button className={activeTab === 1 ? 'active' : ''} onClick={() => setActiveTab(1)}>
           Завдання 1: Фільм
         </button>
@@ -62,6 +63,7 @@ export default function App() {
           Завдання 4: Улюбленець
         </button>
       </nav>
+      <br></br>
 
       <main className="content">
         {activeTab === 1 && <FavoriteMovie movie={movieData} />}
