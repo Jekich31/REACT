@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from "./styles/App.module.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import type { Todo, SortOrder } from "./types";
@@ -62,10 +63,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="todo-app">
-      <header className="app-header">
+    <main className={styles.todoApp}>
+      <header className={styles.appHeader}>
         <h1>Todo List</h1>
-        <p className="subtitle">Організуй свої щоденні справи та завдання</p>
+        <p className={styles.subtitle}>Організуй свої щоденні справи та завдання</p>
       </header>
 
       <TodoForm
@@ -76,9 +77,9 @@ const App: React.FC = () => {
         sortOrder={sortOrder}
       />
 
-      <div className="counter">
-        <span className="counter-label">Всього завдань:</span>
-        <span id="todo-count">
+      <div className={styles.counter}>
+        <span className={styles.counterLabel}>Всього завдань:</span>
+        <span id="todo-count" className={styles.todoCount}>
           {totalCount} {completedCount > 0 && `(виконано: ${completedCount})`}
         </span>
       </div>

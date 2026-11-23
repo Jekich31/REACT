@@ -1,0 +1,17 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 60px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 36px 16px;
+  color: #94a3b8;
+  font-size: 0.92rem;
+  font-style: italic;
+  border: 2px dashed #e2e8f0;
+  border-radius: 12px;
+  background: #fafafa;
+}

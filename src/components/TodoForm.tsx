@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/TodoForm.module.css";
 import type { SortOrder } from "../types";
 
 interface TodoFormProps {
@@ -29,25 +30,32 @@ const TodoForm: React.FC<TodoFormProps> = ({
       : "Сортувати";
 
   return (
-    <form className="controls" onSubmit={handleSubmit}>
+    <form className={styles.controls} onSubmit={handleSubmit}>
       <input
         type="text"
         id="todo-input"
+        className={styles.todoInput}
         placeholder="Що потрібно зробити?"
         value={inputValue}
         onChange={(e) => onInputChange(e.target.value)}
         autoComplete="off"
       />
-      <button type="submit" id="add-button" title="Додати задачу">
-        <span className="btn-icon">＋</span> Додати
+      <button
+        type="submit"
+        id="add-button"
+        className={styles.addButton}
+        title="Додати задачу"
+      >
+        <span className={styles.btnIcon}>＋</span> Додати
       </button>
       <button
         type="button"
         id="sort-button"
+        className={styles.sortButton}
         onClick={onToggleSort}
         title="Сортувати за алфавітом"
       >
-        <span className="btn-icon">⇅</span> {sortLabel}
+        <span className={styles.btnIcon}>⇅</span> {sortLabel}
       </button>
     </form>
   );

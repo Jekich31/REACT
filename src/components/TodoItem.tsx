@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/TodoItem.module.css";
 import type { Todo } from "../types";
 
 interface TodoItemProps {
@@ -8,13 +9,17 @@ interface TodoItemProps {
 }
 
 const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
+  const itemClass = todo.completed
+    ? `${styles.todoItem} ${styles.completed}`
+    : styles.todoItem;
+
   return (
-    <div className={`todo-item ${todo.completed ? "completed" : ""}`}>
-      <span onClick={() => onToggle(todo.id)} style={{ cursor: "pointer" }}>
+    <div className={itemClass}>
+      <span className={styles.text} onClick={() => onToggle(todo.id)}>
         {todo.text}
       </span>
       <button
-        className="delete-button"
+        className={styles.deleteButton}
         onClick={() => onDelete(todo.id)}
         title="Видалити задачу"
       >

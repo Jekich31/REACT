@@ -1,0 +1,80 @@
+.todoApp {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 45px -15px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  animation: appAppear 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes appAppear {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.appHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.appHeader h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #0f172a 30%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.counterLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.todoCount {
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 480px) {
+  .todoApp {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .appHeader h1 {
+    font-size: 1.65rem;
+  }
+}
