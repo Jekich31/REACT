@@ -1,0 +1,150 @@
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  list-style: none;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Пріоритети завдань (ліва плашка) */
+.todo-item--low {
+  border-left: 5px solid var(--priority-low);
+}
+
+.todo-item--normal {
+  border-left: 5px solid var(--priority-normal);
+}
+
+.todo-item--high {
+  border-left: 5px solid var(--priority-high);
+}
+
+/* Стан виконання */
+.todo-item--completed {
+  opacity: 0.65;
+  background-color: #f8fafc;
+}
+
+.todo-item--completed .todo-item__text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Прострочений дедлайн */
+.todo-item--overdue {
+  box-shadow: 0 0 0 2px #ef4444, 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+/* Чекбокс */
+.todo-item__checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.todo-item__checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+  border-radius: 6px;
+}
+
+/* Контент завдання */
+.todo-item__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.todo-item__text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 6px;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.todo-item__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.todo-item__badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  text-transform: capitalize;
+}
+
+.todo-item__badge--low {
+  background-color: #ecfdf5;
+  color: #065f46;
+}
+
+.todo-item__badge--normal {
+  background-color: #fffbeb;
+  color: #92400e;
+}
+
+.todo-item__badge--high {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+.todo-item__date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.todo-item__date--overdue {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.todo-item__overdue-alert {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+/* Кнопка видалення */
+.todo-item__delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  color: #94a3b8;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-item__delete-btn:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}

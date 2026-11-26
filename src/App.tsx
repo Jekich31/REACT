@@ -4,7 +4,7 @@ import { TaskForm } from "./components/TaskForm";
 import { Counter } from "./components/Counter";
 import { TodoList } from "./components/TodoList";
 import type { Task } from "./types";
-
+import styles from "./styles/App.module.css"
 const MOCK_TASKS: Task[] = [
   {
     id: 1,
@@ -35,7 +35,7 @@ export function App() {
   const completed = MOCK_TASKS.filter((task) => task.completed).length;
 
   return (
-    <main className="app-container">
+    <main className={styles["app-container"]}>
       <Header />
       <TaskForm />
       <Counter total={total} completed={completed} />

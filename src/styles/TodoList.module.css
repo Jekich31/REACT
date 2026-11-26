@@ -1,0 +1,34 @@
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-empty {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  border: 2px dashed #cbd5e1;
+}
+
+.todo-list-empty__icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.todo-list-empty__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.todo-list-empty__subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 320px;
+  margin: 0 auto;
+}
